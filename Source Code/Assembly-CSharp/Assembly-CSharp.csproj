@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E971AD12-A15C-4928-BE52-983062D3107D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TaleWorlds.CompanionBook</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard" />
+    <Reference Include="Unity.Addressables" />
+    <Reference Include="Unity.InputSystem" />
+    <Reference Include="Unity.Localization" />
+    <Reference Include="Unity.ResourceManager" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimatedCarouselItem.cs" />
+    <Compile Include="AnimationProgress.cs" />
+    <Compile Include="AnimationProgressType.cs" />
+    <Compile Include="AudioSystem\AudioManager.cs" />
+    <Compile Include="AudioSystem\ButtonAudioPlayer.cs" />
+    <Compile Include="AutoEndingAnimationHandler.cs" />
+    <Compile Include="BackToMenuButton.cs" />
+    <Compile Include="BookSection\BookPageController.cs" />
+    <Compile Include="BookSection\BookScreen.cs" />
+    <Compile Include="BookSection\ChapterSelectionItem.cs" />
+    <Compile Include="BookSection\ChapterSelectionPopup.cs" />
+    <Compile Include="BookSection\IllustrationSizeController.cs" />
+    <Compile Include="BookSection\NavigationControls.cs" />
+    <Compile Include="BookSection\PageSoftenerHandler.cs" />
+    <Compile Include="BookSection\SettingsPage.cs" />
+    <Compile Include="BookSection\ToggleUIButton.cs" />
+    <Compile Include="BookSection\UIModeHandler.cs" />
+    <Compile Include="BookSection\VoiceOverControls.cs" />
+    <Compile Include="BookSection\VoiceOverState.cs" />
+    <Compile Include="BrushSystem\Brush.cs" />
+    <Compile Include="BrushSystem\BrushBase.cs" />
+    <Compile Include="BrushSystem\BrushState.cs" />
+    <Compile Include="BrushSystem\BrushStateDefinition.cs" />
+    <Compile Include="BrushSystem\ChildBrush.cs" />
+    <Compile Include="ButtonHoverHandler.cs" />
+    <Compile Include="CarouselControlItem.cs" />
+    <Compile Include="CarouselControls.cs" />
+    <Compile Include="ChineseLocaleSelector.cs" />
+    <Compile Include="ConceptArtSection\ConceptArtCarousel.cs" />
+    <Compile Include="ConceptArtSection\ConceptArtItem.cs" />
+    <Compile Include="ConceptArtSection\ConceptArtScreen.cs" />
+    <Compile Include="ConceptArtSection\FactionDescription.cs" />
+    <Compile Include="ConceptArtSection\FactionItem.cs" />
+    <Compile Include="ConceptArtSection\FactionSelection.cs" />
+    <Compile Include="CreditsSection\CompanyStoryItemPanel.cs" />
+    <Compile Include="CreditsSection\CompanyStoryNavigationControls.cs" />
+    <Compile Include="CreditsSection\CreditsNodeImageItem.cs" />
+    <Compile Include="CreditsSection\CreditsNodeItem.cs" />
+    <Compile Include="CreditsSection\CreditsNodeTextItem.cs" />
+    <Compile Include="CreditsSection\CreditsPanel.cs" />
+    <Compile Include="CreditsSection\CreditsScreen.cs" />
+    <Compile Include="CursorManager.cs" />
+    <Compile Include="DropdownItemHandler.cs" />
+    <Compile Include="FontSizeManagement\FontSizeControlPanel.cs" />
+    <Compile Include="FontSizeManagement\FontSizeManager.cs" />
+    <Compile Include="FontSizeManagement\FontSizeOptionItem.cs" />
+    <Compile Include="FontSizeManagement\FontSizeType.cs" />
+    <Compile Include="FontSizeManagement\TextFontSizeController.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GamepadReconnectHandler.cs" />
+    <Compile Include="GlobalBackground.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="InputBindingVisual.cs" />
+    <Compile Include="LoadingScreen.cs" />
+    <Compile Include="LocalizedText.cs" />
+    <Compile Include="MapSection\AlphaHitTestComponent.cs" />
+    <Compile Include="MapSection\FactionMapPieceItem.cs" />
+    <Compile Include="MapSection\FactionMapPieceItemPopupLayout.cs" />
+    <Compile Include="MapSection\FactionMapPieces.cs" />
+    <Compile Include="MapSection\FrameButtonItem.cs" />
+    <Compile Include="MapSection\FrameButtonsController.cs" />
+    <Compile Include="MapSection\IFactionMapPieceItem.cs" />
+    <Compile Include="MapSection\MapFactionPopup.cs" />
+    <Compile Include="MapSection\MapFactionPopupController.cs" />
+    <Compile Include="MapSection\MapInputEventProvider.cs" />
+    <Compile Include="MapSection\MapScreen.cs" />
+    <Compile Include="MapSection\ToggleBordersButton.cs" />
+    <Compile Include="MenuSection\BookQueryPopup.cs" />
+    <Compile Include="MenuSection\ExitConfirmationPopup.cs" />
+    <Compile Include="MenuSection\MenuButtons.cs" />
+    <Compile Include="MenuSection\MenuLogo.cs" />
+    <Compile Include="MenuSection\MenuScreen.cs" />
+    <Compile Include="MenuSection\Options\NumericOptionItem.cs" />
+    <Compile Include="MenuSection\Options\OptionItem.cs" />
+    <Compile Include="MenuSection\Options\OptionsPanel.cs" />
+    <Compile Include="MenuSection\Options\SelectionOptionItem.cs" />
+    <Compile Include="NavigationAutoScroll.cs" />
+    <Compile Include="NavigationAutoScrollItem.cs" />
+    <Compile Include="NavigationStatusProvider.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="Options\EngineOptionType.cs" />
+    <Compile Include="Options\GenericOptionType.cs" />
+    <Compile Include="Options\NumericOption.cs" />
+    <Compile Include="Options\OptionBase.cs" />
+    <Compile Include="Options\OptionsManager.cs" />
+    <Compile Include="Options\OptionType.cs" />
+    <Compile Include="Options\SelectionOption.cs" />
+    <Compile Include="PlayerActions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceSystem\BookResources\Book.cs" />
+    <Compile Include="ResourceSystem\BookResources\Chapter.cs" />
+    <Compile Include="ResourceSystem\BookResources\Page.cs" />
+    <Compile Include="ResourceSystem\BookResources\PageType.cs" />
+    <Compile Include="ResourceSystem\ConceptArtResources\ConceptArtFaction.cs" />
+    <Compile Include="ResourceSystem\ConceptArtResources\ConceptArtFactionType.cs" />
+    <Compile Include="ResourceSystem\ConceptArtResources\ConceptArts.cs" />
+    <Compile Include="ResourceSystem\CreditsResources\CompanyStoryItem.cs" />
+    <Compile Include="ResourceSystem\CreditsResources\CompanyStoryItemSize.cs" />
+    <Compile Include="ResourceSystem\CreditsResources\Credits.cs" />
+    <Compile Include="ResourceSystem\CreditsResources\CreditsNode.cs" />
+    <Compile Include="ResourceSystem\CreditsResources\CreditsNodeList.cs" />
+    <Compile Include="ResourceSystem\CreditsResources\CreditsNodeType.cs" />
+    <Compile Include="ResourceSystem\IResource.cs" />
+    <Compile Include="ResourceSystem\Localization\LocalizationLoader.cs" />
+    <Compile Include="ResourceSystem\MapResources\Map.cs" />
+    <Compile Include="ResourceSystem\MapResources\MapFaction.cs" />
+    <Compile Include="ResourceSystem\MapResources\MapFactionType.cs" />
+    <Compile Include="ResourceSystem\ResourceProvider.cs" />
+    <Compile Include="ResourceSystem\SoundtrackResources\SoundtrackClip.cs" />
+    <Compile Include="ResourceSystem\SoundtrackResources\SoundtrackClips.cs" />
+    <Compile Include="ScreenSystem\ScreenComponent.cs" />
+    <Compile Include="ScreenSystem\ScreenManager.cs" />
+    <Compile Include="ScreenSystem\ScreenType.cs" />
+    <Compile Include="SoundtrackControls.cs" />
+    <Compile Include="SoundtrackSection\SoundtrackList.cs" />
+    <Compile Include="SoundtrackSection\SoundtrackListItem.cs" />
+    <Compile Include="SoundtrackSection\SoundtrackScreen.cs" />
+    <Compile Include="Soundtracks\IPlaylist.cs" />
+    <Compile Include="Soundtracks\ISoundtrack.cs" />
+    <Compile Include="Soundtracks\Playlist.cs" />
+    <Compile Include="Soundtracks\Soundtrack.cs" />
+    <Compile Include="Soundtracks\SoundtrackPlayer.cs" />
+    <Compile Include="StickNavigationManager.cs" />
+    <Compile Include="TextAutoFontSelector.cs" />
+    <Compile Include="VerticalScrollablePanel.cs" />
+    <Compile Include="VerticalScrollablePanelBindings.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
